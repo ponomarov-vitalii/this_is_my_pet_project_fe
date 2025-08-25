@@ -65,8 +65,16 @@ export default function ThemeCustomizer() {
       const storedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
       const storedPrimary = localStorage.getItem('primaryColor');
       
-      if (storedTheme) setTheme(storedTheme);
-      if (storedPrimary) setPrimaryColor(storedPrimary);
+      if (storedTheme)   {
+        setTheme(storedTheme);
+      } else {
+        setTheme('light');
+      }
+      if (storedPrimary) {
+        setPrimaryColor(storedPrimary);
+      } else {
+        setPrimaryColor('#6b7280');
+      }
     } catch {
     }
   }, []);
@@ -88,11 +96,11 @@ export default function ThemeCustomizer() {
   }, [theme, primaryColor]);
 
   if (!theme || !primaryColor) {
-    return <div className="h-[40px]"></div>;
+    return <div className="h-[40px] min-w-[269px]"></div>;
   }
 
   return (
-    <div className="flex items-center space-x-3 h-[40px]">
+    <div className="flex items-center space-x-3 h-[40px] min-w-[269px]">
       <span className="text-sm text-primary-500">Theme:</span>
       <div className="flex bg-primary-200 rounded-lg p-1">
         <button
