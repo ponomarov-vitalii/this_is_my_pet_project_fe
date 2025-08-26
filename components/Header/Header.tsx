@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import Button from '@/components/atoms/Button/Button';
-import ThemeCustomizer from '@/components/atoms/ThemeCustomizer/ThemeCustomizer';
+import Button from '../Button/Button';
+import ThemeCustomizer from '../ThemeCustomizer/ThemeCustomizer';
 // import ThemeToggle from '@/components/ui/ThemeToggle/ThemeToggle';
 
 export default function Header() {
