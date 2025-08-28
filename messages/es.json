@@ -122,5 +122,22 @@
     "checkStatus": "Verificar Estado",
     "contactSupport": "Contactar Soporte",
     "followUs": "Síguenos en redes sociales para actualizaciones en tiempo real"
+  },
+  "metadata": {
+    "home": {
+      "title": "NewsFlow - Mantente Informado con Noticias Personalizadas",
+      "description": "Recibe noticias y artículos curados semanalmente en tu bandeja de entrada. Suscríbete a los temas que te interesan y mantente actualizado con selección de contenido con IA.",
+      "keywords": "noticias personalizadas, suscripción newsletter, artículos curados, entrega de noticias, feeds RSS, curación de noticias IA, temas personalizados, boletín por email",
+      "siteName": "NewsFlow",
+      "openGraph": {
+        "title": "NewsFlow - Tu Curador Personal de Noticias",
+        "description": "Suscríbete a temas de noticias personalizados y recibe artículos curados, noticias e información directamente en tu bandeja de entrada cada semana.",
+        "imageAlt": "NewsFlow - Plataforma de Entrega de Noticias Personalizadas"
+      },
+      "twitter": {
+        "title": "NewsFlow - Mantente Informado con Noticias Personalizadas",
+        "description": "Recibe noticias y artículos curados sobre los temas que te importan, entregados semanalmente en tu bandeja de entrada. Comienza tu suscripción gratuita hoy."
+      }
+    }
   }
 }

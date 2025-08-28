@@ -122,5 +122,22 @@
     "checkStatus": "Check Status",
     "contactSupport": "Contact Support",
     "followUs": "Follow us on social media for real-time updates"
+  },
+  "metadata": {
+    "home": {
+      "title": "NewsFlow - Stay Informed with Personalized News Delivery",
+      "description": "Get curated news and articles delivered to your inbox weekly. Subscribe to topics that matter to you and stay updated with AI-powered content selection.",
+      "keywords": "personalized news, newsletter subscription, curated articles, news delivery, RSS feeds, AI news curation, custom topics, email newsletter",
+      "siteName": "NewsFlow",
+      "openGraph": {
+        "title": "NewsFlow - Your Personal News Curator",
+        "description": "Subscribe to personalized news topics and receive curated articles, news, and insights delivered directly to your inbox every week.",
+        "imageAlt": "NewsFlow - Personalized News Delivery Platform"
+      },
+      "twitter": {
+        "title": "NewsFlow - Stay Informed with Personalized News",
+        "description": "Get curated news and articles on topics you care about, delivered weekly to your inbox. Start your free subscription today."
+      }
+    }
   }
 }

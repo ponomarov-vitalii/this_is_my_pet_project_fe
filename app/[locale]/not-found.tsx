@@ -15,7 +15,7 @@ export default async function NotFound() {
           <p className="text-lg text-primary-600 mb-8">{t('description')}</p>
         </div>
 
-        <div className="space-y-4">
+        <div className="flex flex-col gap-4 justify-center">
           <Link href={`/${locale}`}>
             <Button variant="primary" size="lg" className="w-full">
               {t('goHome')}
