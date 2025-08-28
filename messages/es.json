@@ -1,0 +1,126 @@
+{
+  "header": {
+    "logo": "NewsFlow",
+    "nav": {
+      "features": "Funciones",
+      "pricing": "Precios",
+      "about": "Acerca de",
+      "help": "Ayuda"
+    },
+    "auth": {
+      "signIn": "Iniciar Sesión",
+      "getStarted": "Comenzar"
+    },
+    "language": "Idioma"
+  },
+  "footer": {
+    "description": "Curación inteligente de noticias para el profesional moderno. Mantente informado, mantente adelante.",
+    "sections": {
+      "product": {
+        "title": "Producto",
+        "features": "Funciones",
+        "pricing": "Precios",
+        "api": "API",
+        "integrations": "Integraciones"
+      },
+      "company": {
+        "title": "Empresa",
+        "about": "Acerca de",
+        "blog": "Blog",
+        "careers": "Carreras",
+        "press": "Prensa"
+      },
+      "support": {
+        "title": "Soporte",
+        "helpCenter": "Centro de Ayuda",
+        "contact": "Contacto",
+        "status": "Estado",
+        "community": "Comunidad"
+      }
+    },
+    "legal": {
+      "copyright": "© {year} NewsFlow. Todos los derechos reservados.",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio",
+      "cookies": "Política de Cookies"
+    }
+  },
+  "pricing": {
+    "title": "Precios Simples y Transparentes",
+    "subtitle": "Elige el plan que se adapte a tus necesidades",
+    "billing": {
+      "monthly": "Mensual",
+      "annual": "Anual (Ahorra 20%)"
+    },
+    "plans": {
+      "free": {
+        "name": "Gratuito",
+        "features": {
+          "subscriptions": "3 suscripciones de boletines",
+          "delivery": "Entrega semanal",
+          "curation": "Curación básica con IA",
+          "support": "Soporte por email"
+        },
+        "button": "Comenzar Gratis"
+      },
+      "pro": {
+        "name": "Pro",
+        "popular": "Más Popular",
+        "features": {
+          "subscriptions": "Suscripciones ilimitadas",
+          "frequency": "Frecuencia personalizada",
+          "curation": "Curación avanzada con IA",
+          "support": "Soporte prioritario",
+          "analytics": "Panel de análisis"
+        },
+        "button": "Iniciar Prueba Pro"
+      },
+      "team": {
+        "name": "Equipo",
+        "features": {
+          "everything": "Todo en Pro",
+          "collaboration": "Colaboración en equipo",
+          "api": "Acceso a API",
+          "integrations": "Integraciones personalizadas",
+          "support": "Soporte dedicado"
+        },
+        "button": "Contactar Ventas"
+      }
+    }
+  },
+  "errors": {
+    "notFound": {
+      "title": "Página No Encontrada",
+      "description": "Lo sentimos, no pudimos encontrar la página que buscas. Puede haber sido movida, eliminada, o ingresaste una URL incorrecta.",
+      "goHome": "Volver al Inicio",
+      "contactSupport": "Contactar Soporte",
+      "errorCode": "Código de Error: 404 - Página No Encontrada"
+    },
+    "general": {
+      "title": "¡Ups! Algo salió mal",
+      "description": "Encontramos un error inesperado. Nuestro equipo ha sido notificado y está trabajando para solucionar este problema.",
+      "tryAgain": "Intentar de Nuevo",
+      "goHome": "Volver al Inicio",
+      "errorDetails": "Detalles del Error (Desarrollo):",
+      "digest": "Resumen"
+    },
+    "global": {
+      "title": "Error de Aplicación",
+      "description": "Ocurrió un error crítico. Por favor, actualiza la página o inténtalo de nuevo más tarde.",
+      "contact": "Si este problema persiste, por favor contacta soporte."
+    }
+  },
+  "loading": {
+    "title": "Cargando...",
+    "description": "Por favor espera mientras preparamos tu contenido"
+  },
+  "maintenance": {
+    "title": "En Mantenimiento",
+    "description": "Estamos realizando mantenimiento programado para mejorar tu experiencia. ¡Volveremos pronto!",
+    "estimated": "Finalización estimada:",
+    "duration": "Usualmente toma 30-60 minutos",
+    "checkStatus": "Verificar Estado",
+    "contactSupport": "Contactar Soporte",
+    "followUs": "Síguenos en redes sociales para actualizaciones en tiempo real"
+  }
+}

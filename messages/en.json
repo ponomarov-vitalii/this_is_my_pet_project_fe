@@ -1,0 +1,126 @@
+{
+  "header": {
+    "logo": "NewsFlow",
+    "nav": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "about": "About",
+      "help": "Help"
+    },
+    "auth": {
+      "signIn": "Sign In",
+      "getStarted": "Get Started"
+    },
+    "language": "Language"
+  },
+  "footer": {
+    "description": "Intelligent news curation for the modern professional. Stay informed, stay ahead.",
+    "sections": {
+      "product": {
+        "title": "Product",
+        "features": "Features",
+        "pricing": "Pricing",
+        "api": "API",
+        "integrations": "Integrations"
+      },
+      "company": {
+        "title": "Company",
+        "about": "About",
+        "blog": "Blog",
+        "careers": "Careers",
+        "press": "Press"
+      },
+      "support": {
+        "title": "Support",
+        "helpCenter": "Help Center",
+        "contact": "Contact",
+        "status": "Status",
+        "community": "Community"
+      }
+    },
+    "legal": {
+      "copyright": "© {year} NewsFlow. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Choose the plan that fits your needs",
+    "billing": {
+      "monthly": "Monthly",
+      "annual": "Annual (Save 20%)"
+    },
+    "plans": {
+      "free": {
+        "name": "Free",
+        "features": {
+          "subscriptions": "3 newsletter subscriptions",
+          "delivery": "Weekly delivery",
+          "curation": "Basic AI curation",
+          "support": "Email support"
+        },
+        "button": "Get Started Free"
+      },
+      "pro": {
+        "name": "Pro",
+        "popular": "Most Popular",
+        "features": {
+          "subscriptions": "Unlimited subscriptions",
+          "frequency": "Custom frequency",
+          "curation": "Advanced AI curation",
+          "support": "Priority support",
+          "analytics": "Analytics dashboard"
+        },
+        "button": "Start Pro Trial"
+      },
+      "team": {
+        "name": "Team",
+        "features": {
+          "everything": "Everything in Pro",
+          "collaboration": "Team collaboration",
+          "api": "API access",
+          "integrations": "Custom integrations",
+          "support": "Dedicated support"
+        },
+        "button": "Contact Sales"
+      }
+    }
+  },
+  "errors": {
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or you entered the wrong URL.",
+      "goHome": "Go Back Home",
+      "contactSupport": "Contact Support",
+      "errorCode": "Error Code: 404 - Page Not Found"
+    },
+    "general": {
+      "title": "Oops! Something went wrong",
+      "description": "We encountered an unexpected error. Our team has been notified and is working to fix this issue.",
+      "tryAgain": "Try Again",
+      "goHome": "Go Back Home",
+      "errorDetails": "Error Details (Development):",
+      "digest": "Digest"
+    },
+    "global": {
+      "title": "Application Error",
+      "description": "A critical error occurred. Please refresh the page or try again later.",
+      "contact": "If this problem persists, please contact support."
+    }
+  },
+  "loading": {
+    "title": "Loading...",
+    "description": "Please wait while we prepare your content"
+  },
+  "maintenance": {
+    "title": "Under Maintenance",
+    "description": "We're currently performing scheduled maintenance to improve your experience. We'll be back shortly!",
+    "estimated": "Estimated completion:",
+    "duration": "Usually takes 30-60 minutes",
+    "checkStatus": "Check Status",
+    "contactSupport": "Contact Support",
+    "followUs": "Follow us on social media for real-time updates"
+  }
+}

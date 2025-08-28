@@ -1,32 +1,38 @@
 import Link from 'next/link';
+import {getTranslations, getLocale} from 'next-intl/server';
 
-export default function Footer() {
+export default async function Footer() {
+  const t = await getTranslations('footer');
+  const locale = await getLocale();
+  
+  const currentYear = new Date().getFullYear();
+
   const footerSections = [
     {
-      title: 'Product',
+      title: t('sections.product.title'),
       links: [
-        { label: 'Features', href: '/features' },
-        { label: 'Pricing', href: '/pricing' },
-        { label: 'API', href: '/api' },
-        { label: 'Integrations', href: '/integrations' }
+        { label: t('sections.product.features'), href: `/${locale}/features` },
+        { label: t('sections.product.pricing'), href: `/${locale}/pricing` },
+        { label: t('sections.product.api'), href: `/${locale}/api` },
+        { label: t('sections.product.integrations'), href: `/${locale}/integrations` }
       ]
     },
     {
-      title: 'Company',
+      title: t('sections.company.title'),
       links: [
-        { label: 'About', href: '/about' },
-        { label: 'Blog', href: '/blog' },
-        { label: 'Careers', href: '/careers' },
-        { label: 'Press', href: '/press' }
+        { label: t('sections.company.about'), href: `/${locale}/about` },
+        { label: t('sections.company.blog'), href: `/${locale}/blog` },
+        { label: t('sections.company.careers'), href: `/${locale}/careers` },
+        { label: t('sections.company.press'), href: `/${locale}/press` }
       ]
     },
     {
-      title: 'Support',
+      title: t('sections.support.title'),
       links: [
-        { label: 'Help Center', href: '/help' },
-        { label: 'Contact', href: '/contact' },
-        { label: 'Status', href: '/status' },
-        { label: 'Community', href: '/community' }
+        { label: t('sections.support.helpCenter'), href: `/${locale}/help` },
+        { label: t('sections.support.contact'), href: `/${locale}/contact` },
+        { label: t('sections.support.status'), href: `/${locale}/status` },
+        { label: t('sections.support.community'), href: `/${locale}/community` }
       ]
     }
   ];
@@ -46,7 +52,7 @@ export default function Footer() {
               <span className="text-xl font-bold text-primary-900">NewsFlow</span>
             </div>
             <p className="text-sm text-primary-600 mb-6 max-w-xs">
-              Intelligent news curation for the modern professional. Stay informed, stay ahead.
+              {t('description')}
             </p>
             
             {/* Social Links */}
@@ -95,17 +101,17 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-primary-200">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-primary-500">
-              © {new Date().getFullYear()} NewsFlow. All rights reserved.
+              {t('legal.copyright', { year: currentYear })}
             </p>
             <nav className="flex gap-6 text-sm">
-              <Link href="/privacy" className="text-primary-500 hover:text-primary-700 transition-colors">
-                Privacy Policy
+              <Link href={`/${locale}/privacy`} className="text-primary-500 hover:text-primary-700 transition-colors">
+                {t('legal.privacy')}
               </Link>
-              <Link href="/terms" className="text-primary-500 hover:text-primary-700 transition-colors">
-                Terms of Service
+              <Link href={`/${locale}/terms`} className="text-primary-500 hover:text-primary-700 transition-colors">
+                {t('legal.terms')}
               </Link>
-              <Link href="/cookies" className="text-primary-500 hover:text-primary-700 transition-colors">
-                Cookie Policy
+              <Link href={`/${locale}/cookies`} className="text-primary-500 hover:text-primary-700 transition-colors">
+                {t('legal.cookies')}
               </Link>
             </nav>
           </div>
