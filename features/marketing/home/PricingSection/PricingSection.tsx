@@ -1,55 +1,58 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import Button from '@/components/Button/Button';
 
 export default function PricingSection() {
   const [isAnnual, setIsAnnual] = useState(false);
+  const t = useTranslations('homepage.pricing');
 
   const plans = [
     {
-      name: 'Free',
+      name: t('plans.free.name'),
       price: '$0',
-      period: '/month',
+      period: `/${t('billing.userMonth')}`,
       features: [
-        '3 newsletter subscriptions',
-        'Weekly delivery',
-        'Basic AI curation', 
-        'Email support'
+        t('plans.free.features.subscriptions'),
+        t('plans.free.features.delivery'),
+        t('plans.free.features.curation'),
+        t('plans.free.features.support')
       ],
-      buttonText: 'Get Started Free',
+      buttonText: t('plans.free.button'),
       buttonVariant: 'secondary' as const,
       popular: false
     },
     {
-      name: 'Pro',
+      name: t('plans.pro.name'),
       price: isAnnual ? '$7' : '$9',
-      period: '/month',
+      period: `/${t('billing.userMonth')}`,
       originalPrice: isAnnual ? '$9' : null,
       features: [
-        'Unlimited subscriptions',
-        'Custom frequency',
-        'Advanced AI curation',
-        'Priority support',
-        'Analytics dashboard'
+        t('plans.pro.features.subscriptions'),
+        t('plans.pro.features.frequency'),
+        t('plans.pro.features.curation'),
+        t('plans.pro.features.support'),
+        t('plans.pro.features.analytics')
       ],
-      buttonText: 'Start Pro Trial',
+      buttonText: t('plans.pro.button'),
       buttonVariant: 'primary' as const,
-      popular: true
+      popular: true,
+      popularText: t('plans.pro.popular')
     },
     {
-      name: 'Team',
+      name: t('plans.team.name'),
       price: isAnnual ? '$23' : '$29',
-      period: '/month',
+      period: `/${t('billing.userMonth')}`,
       originalPrice: isAnnual ? '$29' : null,
       features: [
-        'Everything in Pro',
-        'Team collaboration',
-        'API access',
-        'Custom integrations',
-        'Dedicated support'
+        t('plans.team.features.everything'),
+        t('plans.team.features.collaboration'),
+        t('plans.team.features.api'),
+        t('plans.team.features.integrations'),
+        t('plans.team.features.support')
       ],
-      buttonText: 'Contact Sales',
+      buttonText: t('plans.team.button'),
       buttonVariant: 'primary' as const,
       popular: false
     }
@@ -60,14 +63,14 @@ export default function PricingSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
-            Simple, Transparent Pricing
+            {t('title')}
           </h2>
           <p className="text-lg text-primary-600 max-w-2xl mx-auto mb-8">
-            Choose the plan that fits your needs
+            {t('subtitle')}
           </p>
 
           {/* Billing Toggle */}
-          <div className="inline-flex items-center bg-primary-200 rounded-lg p-1">
+          <div className="inline-flex items-center bg-primary-200 rounded-lg p-1 border">
             <button
               onClick={() => setIsAnnual(false)}
               className={`px-6 py-2 rounded-md font-medium transition-all duration-200 ${
@@ -76,7 +79,7 @@ export default function PricingSection() {
                   : 'text-primary-700 hover:text-primary-900'
               }`}
             >
-              Monthly
+              {t('billing.monthly')}
             </button>
             <button
               onClick={() => setIsAnnual(true)}
@@ -86,7 +89,7 @@ export default function PricingSection() {
                   : 'text-primary-700 hover:text-primary-900'
               }`}
             >
-              Annual (Save 20%)
+              {t('billing.annual')}
             </button>
           </div>
         </div>
@@ -106,7 +109,7 @@ export default function PricingSection() {
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-primary-700 text-primary-50 px-4 py-1 rounded-full text-sm font-medium">
-                    Most Popular
+                    {plan.popularText}
                   </span>
                 </div>
               )}
@@ -125,12 +128,12 @@ export default function PricingSection() {
                   <span className="text-primary-600 ml-1">
                     {plan.period}
                   </span>
+                  {plan.originalPrice && (
+                    <span className="text-sm text-primary-500 line-through ml-4">
+                      {plan.originalPrice}{plan.period}
+                    </span>
+                  )}
                 </div>
-                {plan.originalPrice && (
-                  <span className="text-sm text-primary-500 line-through">
-                    {plan.originalPrice}/month
-                  </span>
-                )}
               </div>
 
               {/* Features */}

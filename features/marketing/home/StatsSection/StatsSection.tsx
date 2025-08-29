@@ -1,24 +1,27 @@
 'use client';
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function StatsSection() {
+  const t = useTranslations('homepage.stats');
+
   const stats = [
     {
       value: '50K+',
-      label: 'Active Users'
+      label: t('activeUsers')
     },
     {
       value: '2M+',
-      label: 'Articles Curated'
+      label: t('articlesCurated')
     },
     {
       value: '500+',
-      label: 'Trusted Sources'
+      label: t('trustedSources')
     },
     {
       value: '98%',
-      label: 'Satisfaction Rate'
+      label: t('satisfactionRate')
     }
   ];
 

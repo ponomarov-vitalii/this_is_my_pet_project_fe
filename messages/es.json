@@ -45,49 +45,6 @@
       "cookies": "Política de Cookies"
     }
   },
-  "pricing": {
-    "title": "Precios Simples y Transparentes",
-    "subtitle": "Elige el plan que se adapte a tus necesidades",
-    "billing": {
-      "monthly": "Mensual",
-      "annual": "Anual (Ahorra 20%)"
-    },
-    "plans": {
-      "free": {
-        "name": "Gratuito",
-        "features": {
-          "subscriptions": "3 suscripciones de boletines",
-          "delivery": "Entrega semanal",
-          "curation": "Curación básica con IA",
-          "support": "Soporte por email"
-        },
-        "button": "Comenzar Gratis"
-      },
-      "pro": {
-        "name": "Pro",
-        "popular": "Más Popular",
-        "features": {
-          "subscriptions": "Suscripciones ilimitadas",
-          "frequency": "Frecuencia personalizada",
-          "curation": "Curación avanzada con IA",
-          "support": "Soporte prioritario",
-          "analytics": "Panel de análisis"
-        },
-        "button": "Iniciar Prueba Pro"
-      },
-      "team": {
-        "name": "Equipo",
-        "features": {
-          "everything": "Todo en Pro",
-          "collaboration": "Colaboración en equipo",
-          "api": "Acceso a API",
-          "integrations": "Integraciones personalizadas",
-          "support": "Soporte dedicado"
-        },
-        "button": "Contactar Ventas"
-      }
-    }
-  },
   "errors": {
     "notFound": {
       "title": "Página No Encontrada",
@@ -138,6 +95,179 @@
         "title": "NewsFlow - Mantente Informado con Noticias Personalizadas",
         "description": "Recibe noticias y artículos curados sobre los temas que te importan, entregados semanalmente en tu bandeja de entrada. Comienza tu suscripción gratuita hoy."
       }
+    }
+  },
+  "homepage": {
+    "hero": {
+      "title": "Recibe Resúmenes de Noticias Personalizados",
+      "titleHighlight": "Entregados Semanalmente",
+      "description": "Mantente informado con boletines curados por IA de fuentes confiables. Obtén las noticias más relevantes para tus intereses, entregadas directamente a tu bandeja de entrada.",
+      "emailPlaceholder": "Ingresa tu dirección de correo",
+      "ctaButton": "Iniciar Prueba Gratuita",
+      "trialNote": "Prueba gratuita de 14 días. No se requiere tarjeta de crédito.",
+      "benefits": {
+        "aiPowered": "Curación Impulsada por IA",
+        "trustedSources": "Fuentes Confiables",
+        "customFrequency": "Frecuencia Personalizada"
+      }
+    },
+    "whyChoose": {
+      "title": "¿Por Qué Elegir NewsFlow?",
+      "subtitle": "Nuestra plataforma inteligente combina lo mejor de la curación humana y la tecnología IA para entregarte noticias que te importan.",
+      "features": {
+        "aiCuration": {
+          "title": "Curación Impulsada por IA",
+          "description": "Algoritmos avanzados de aprendizaje automático analizan miles de artículos para destacar las noticias más relevantes e importantes para tus intereses."
+        },
+        "trustedSources": {
+          "title": "Fuentes Confiables",
+          "description": "Nos asociamos con organizaciones de noticias respetables y periodistas verificados para asegurar que recibas información precisa y confiable."
+        },
+        "customizable": {
+          "title": "Experiencia Personalizable",
+          "description": "Personaliza tu resumen de noticias con temas personalizados, frecuencia de entrega y preferencias de formato para que coincidan con tus hábitos de lectura."
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "Cómo Funciona",
+      "subtitle": "Comienza en solo tres simples pasos",
+      "steps": {
+        "chooseTopics": {
+          "title": "Elige Tus Temas",
+          "description": "Selecciona de cientos de temas incluyendo tecnología, negocios, ciencia, política, y más. Nuestra IA aprende tus preferencias con el tiempo."
+        },
+        "setSchedule": {
+          "title": "Establece Tu Horario", 
+          "description": "Elige con qué frecuencia quieres recibir tu resumen - diario, semanal, o intervalos personalizados que se ajusten a tu horario de lectura."
+        },
+        "receiveRead": {
+          "title": "Recibe y Lee",
+          "description": "Obtén boletines bellamente formateados con las historias más importantes, resúmenes y enlaces a artículos completos entregados a tu bandeja de entrada."
+        }
+      }
+    },
+    "newsletterPreview": {
+      "title": "Ve NewsFlow en Acción",
+      "subtitle": "Previsualiza cómo se ve tu boletín personalizado",
+      "sampleNewsletter": {
+        "title": "Tu Resumen Semanal de Tecnología",
+        "date": "15 de Marzo, 2025",
+        "articles": {
+          "aiMedical": {
+            "title": "Avance de IA en Diagnóstico Médico",
+            "description": "Investigadores de la Universidad de Stanford han desarrollado un sistema de IA que puede diagnosticar enfermedades raras con 95% de precisión...",
+            "source": "Noticias Médicas Stanford",
+            "readTime": "5 min de lectura"
+          },
+          "quantum": {
+            "title": "Hito en Computación Cuántica Alcanzado",
+            "description": "IBM anuncia un nuevo procesador cuántico que mantiene coherencia por duraciones récord...",
+            "source": "TechCrunch",
+            "readTime": "3 min de lectura"
+          },
+          "energy": {
+            "title": "Aumento en Inversión de Energía Sostenible",
+            "description": "La inversión global en tecnologías de energía renovable alcanza máximos históricos en Q1 2025...",
+            "source": "Bloomberg Energía",
+            "readTime": "4 min de lectura"
+          }
+        }
+      }
+    },
+    "pricing": {
+      "title": "Precios Simples y Transparentes",
+      "subtitle": "Elige el plan que se adapte a tus necesidades",
+      "billing": {
+        "monthly": "Mensual",
+        "userMonth": "mes",
+        "annual": "Anual (Ahorra 20%)"
+      },
+      "plans": {
+        "free": {
+          "name": "Gratuito",
+          "features": {
+            "subscriptions": "3 suscripciones de boletines",
+            "delivery": "Entrega semanal",
+            "curation": "Curación básica con IA",
+            "support": "Soporte por email"
+          },
+          "button": "Comenzar Gratis"
+        },
+        "pro": {
+          "name": "Pro",
+          "popular": "Más Popular",
+          "features": {
+            "subscriptions": "Suscripciones ilimitadas",
+            "frequency": "Frecuencia personalizada",
+            "curation": "Curación avanzada con IA",
+            "support": "Soporte prioritario",
+            "analytics": "Panel de análisis"
+          },
+          "button": "Iniciar Prueba Pro"
+        },
+        "team": {
+          "name": "Equipo",
+          "features": {
+            "everything": "Todo en Pro",
+            "collaboration": "Colaboración en equipo",
+            "api": "Acceso a API",
+            "integrations": "Integraciones personalizadas",
+            "support": "Soporte dedicado"
+          },
+          "button": "Contactar Ventas"
+        }
+      }
+    },
+    "cta": {
+      "title": "Mantente actualizado con las últimas noticias",
+      "subtitle": "Suscríbete a nuestro boletín y no te pierdas ninguna novedad",
+      "placeholder": "Introduce tu correo electrónico",
+      "ctaButton": "Suscribirse",
+      "noSpam": "Sin spam, nunca",
+      "noCard": "No se requiere tarjeta de crédito",
+      "cancel": "Cancela en cualquier momento"
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "subtitle": "Respuestas rápidas a preguntas comunes sobre nuestro servicio",
+      "aiCuration": {
+        "question": "¿Cómo funciona la curación de noticias con IA?",
+        "answer": "Nuestra IA analiza cientos de fuentes y entrega las noticias más relevantes a tu feed."
+      },
+      "newsletterFrequency": {
+        "question": "¿Con qué frecuencia recibiré boletines?",
+        "answer": "Puedes elegir entre resúmenes diarios, semanales o mensuales según tu preferencia."
+      },
+      "newsSources": {
+        "question": "¿Qué fuentes de noticias se incluyen?",
+        "answer": "Agregamos contenido de medios globales confiables, publicaciones especializadas y voces independientes."
+      },
+      "freeTrial": {
+        "question": "¿Hay una prueba gratuita disponible?",
+        "answer": "Sí, puedes explorar todas las funciones premium gratis durante 14 días."
+      },
+      "teamSharing": {
+        "question": "¿Puedo compartir mi suscripción con mi equipo?",
+        "answer": "Nuestro plan de equipo permite hasta 10 miembros bajo una sola suscripción."
+      },
+      "cancelSubscription": {
+        "question": "¿Puedo cancelar en cualquier momento?",
+        "answer": "Sí, las suscripciones se pueden cancelar en cualquier momento sin cargos ocultos."
+      }
+    },
+    "testimonials": {
+      "title": "Lo que dicen nuestros usuarios",
+      "subtitle": "Opiniones reales de nuestros clientes",
+      "sarah": "Esta aplicación ha cambiado por completo la forma en que leo las noticias. ¡Muy recomendable!",
+      "marcus": "Diseño fantástico y muy fácil de usar.",
+      "emily": "Me encanta poder personalizar mi feed. Es exactamente lo que buscaba."
+    },
+    "stats": {
+      "activeUsers": "Usuarios Activos",
+      "articlesCurated": "Artículos Curados",
+      "trustedSources": "Fuentes Confiables",
+      "satisfactionRate": "Tasa de Satisfacción"
     }
   }
 }

@@ -1,53 +1,27 @@
 'use client';
 
-import React from 'react';
+import { useTranslations } from 'next-intl';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/Accordion/Accordion';
 
 export default function FAQSection() {
+  const t = useTranslations('homepage.faq');
+
   const faqs = [
-    {
-      id: 'ai-curation',
-      question: 'How does the AI curation work?',
-      answer: 'Our AI analyzes thousands of articles daily, considering your reading history, preferences, and engagement patterns to surface the most relevant content for your interests.'
-    },
-    {
-      id: 'newsletter-frequency',
-      question: 'Can I customize my newsletter frequency?',
-      answer: 'Yes! You can choose from daily, weekly, bi-weekly, or monthly delivery. Pro users can set custom frequencies and even receive breaking news alerts.'
-    },
-    {
-      id: 'news-sources',
-      question: 'What sources do you use?',
-      answer: 'We partner with over 500 reputable news organizations, including major newspapers, magazines, research institutions, and verified independent journalists.'
-    },
-    {
-      id: 'free-trial',
-      question: 'Is there a free trial?',
-      answer: 'Absolutely! We offer a 14-day free trial for all paid plans, and our Free tier is available indefinitely with basic features.'
-    },
-    {
-      id: 'team-sharing',
-      question: 'Can I share newsletters with my team?',
-      answer: 'Team plans include collaboration features, shared newsletters, and team analytics. You can also forward individual newsletters to colleagues on any plan.'
-    },
-    {
-      id: 'cancel-subscription',
-      question: 'How do I cancel my subscription?',
-      answer: 'You can cancel anytime from your account settings. Your subscription remains active until the end of your billing period, and you can always reactivate later.'
-    }
+    { id: 'ai-curation', q: t('aiCuration.question'), a: t('aiCuration.answer') },
+    { id: 'newsletter-frequency', q: t('newsletterFrequency.question'), a: t('newsletterFrequency.answer') },
+    { id: 'news-sources', q: t('newsSources.question'), a: t('newsSources.answer') },
+    { id: 'free-trial', q: t('freeTrial.question'), a: t('freeTrial.answer') },
+    { id: 'team-sharing', q: t('teamSharing.question'), a: t('teamSharing.answer') },
+    { id: 'cancel-subscription', q: t('cancelSubscription.question'), a: t('cancelSubscription.answer') }
   ];
 
   return (
     <section className="py-20 px-4 bg-primary-50">
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-lg text-primary-600">
-            Everything you need to know about NewsFlow
-          </p>
-        </div>
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
+          {t('title')}
+        </h2>
+        <p className="text-lg text-primary-600 mb-12">{t('subtitle')}</p>
 
         <Accordion allowMultiple={false} className="space-y-4">
           {faqs.map((faq) => (
@@ -57,10 +31,10 @@ export default function FAQSection() {
               className="bg-primary-50 border-primary-200 hover:border-primary-300 transition-colors"
             >
               <AccordionTrigger className="hover:bg-primary-100">
-                {faq.question}
+                {faq.q}
               </AccordionTrigger>
               <AccordionContent>
-                {faq.answer}
+                {faq.a}
               </AccordionContent>
             </AccordionItem>
           ))}

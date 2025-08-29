@@ -45,49 +45,6 @@
       "cookies": "Cookie Policy"
     }
   },
-  "pricing": {
-    "title": "Simple, Transparent Pricing",
-    "subtitle": "Choose the plan that fits your needs",
-    "billing": {
-      "monthly": "Monthly",
-      "annual": "Annual (Save 20%)"
-    },
-    "plans": {
-      "free": {
-        "name": "Free",
-        "features": {
-          "subscriptions": "3 newsletter subscriptions",
-          "delivery": "Weekly delivery",
-          "curation": "Basic AI curation",
-          "support": "Email support"
-        },
-        "button": "Get Started Free"
-      },
-      "pro": {
-        "name": "Pro",
-        "popular": "Most Popular",
-        "features": {
-          "subscriptions": "Unlimited subscriptions",
-          "frequency": "Custom frequency",
-          "curation": "Advanced AI curation",
-          "support": "Priority support",
-          "analytics": "Analytics dashboard"
-        },
-        "button": "Start Pro Trial"
-      },
-      "team": {
-        "name": "Team",
-        "features": {
-          "everything": "Everything in Pro",
-          "collaboration": "Team collaboration",
-          "api": "API access",
-          "integrations": "Custom integrations",
-          "support": "Dedicated support"
-        },
-        "button": "Contact Sales"
-      }
-    }
-  },
   "errors": {
     "notFound": {
       "title": "Page Not Found",
@@ -138,6 +95,179 @@
         "title": "NewsFlow - Stay Informed with Personalized News",
         "description": "Get curated news and articles on topics you care about, delivered weekly to your inbox. Start your free subscription today."
       }
+    }
+  },
+  "homepage": {
+    "hero": {
+      "title": "Get Personalized News Digests",
+      "titleHighlight": "Delivered Weekly",
+      "description": "Stay informed with AI-curated newsletters from trusted sources. Get the most relevant news for your interests, delivered straight to your inbox.",
+      "emailPlaceholder": "Enter your email address",
+      "ctaButton": "Start Free Trial",
+      "trialNote": "Free 14-day trial. No credit card required.",
+      "benefits": {
+        "aiPowered": "AI-Powered Curation",
+        "trustedSources": "Trusted Sources",
+        "customFrequency": "Custom Frequency"
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose NewsFlow?",
+      "subtitle": "Our intelligent platform combines the best of human curation and AI technology to deliver news that matters to you.",
+      "features": {
+        "aiCuration": {
+          "title": "AI-Powered Curation",
+          "description": "Advanced machine learning algorithms analyze thousands of articles to surface the most relevant and important news for your interests."
+        },
+        "trustedSources": {
+          "title": "Trusted Sources",
+          "description": "We partner with reputable news organizations and verified journalists to ensure you receive accurate, reliable information."
+        },
+        "customizable": {
+          "title": "Customizable Experience",
+          "description": "Tailor your news digest with custom topics, delivery frequency, and format preferences to match your reading habits."
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Get started in just three simple steps",
+      "steps": {
+        "chooseTopics": {
+          "title": "Choose Your Topics",
+          "description": "Select from hundreds of topics including technology, business, science, politics, and more. Our AI learns your preferences over time."
+        },
+        "setSchedule": {
+          "title": "Set Your Schedule", 
+          "description": "Choose how often you want to receive your digest - daily, weekly, or custom intervals that fit your reading schedule."
+        },
+        "receiveRead": {
+          "title": "Receive & Read",
+          "description": "Get beautifully formatted newsletters with the most important stories, summaries, and links to full articles delivered to your inbox."
+        }
+      }
+    },
+    "newsletterPreview": {
+      "title": "See NewsFlow in Action",
+      "subtitle": "Preview what your personalized newsletter looks like",
+      "sampleNewsletter": {
+        "title": "Your Weekly Tech Digest",
+        "date": "March 15, 2025",
+        "articles": {
+          "aiMedical": {
+            "title": "AI Breakthrough in Medical Diagnosis",
+            "description": "Researchers at Stanford University have developed an AI system that can diagnose rare diseases with 95% accuracy...",
+            "source": "Stanford Medical News",
+            "readTime": "5 min read"
+          },
+          "quantum": {
+            "title": "Quantum Computing Milestone Reached",
+            "description": "IBM announces a new quantum processor that maintains coherence for record-breaking durations...",
+            "source": "TechCrunch",
+            "readTime": "3 min read"
+          },
+          "energy": {
+            "title": "Sustainable Energy Investment Surge",
+            "description": "Global investment in renewable energy technologies reaches all-time high in Q1 2025...",
+            "source": "Bloomberg Energy",
+            "readTime": "4 min read"
+          }
+        }
+      }
+    },
+    "pricing": {
+      "title": "Simple, Transparent Pricing",
+      "subtitle": "Choose the plan that fits your needs",
+      "billing": {
+        "monthly": "Monthly",
+        "userMonth": "month",
+        "annual": "Annual (Save 20%)"
+      },
+      "plans": {
+        "free": {
+          "name": "Free",
+          "features": {
+            "subscriptions": "3 newsletter subscriptions",
+            "delivery": "Weekly delivery",
+            "curation": "Basic AI curation",
+            "support": "Email support"
+          },
+          "button": "Get Started Free"
+        },
+        "pro": {
+          "name": "Pro",
+          "popular": "Most Popular",
+          "features": {
+            "subscriptions": "Unlimited subscriptions",
+            "frequency": "Custom frequency",
+            "curation": "Advanced AI curation",
+            "support": "Priority support",
+            "analytics": "Analytics dashboard"
+          },
+          "button": "Start Pro Trial"
+        },
+        "team": {
+          "name": "Team",
+          "features": {
+            "everything": "Everything in Pro",
+            "collaboration": "Team collaboration",
+            "api": "API access",
+            "integrations": "Custom integrations",
+            "support": "Dedicated support"
+          },
+          "button": "Contact Sales"
+        }
+      }
+    },
+    "cta": {
+      "title": "Stay updated with the latest news",
+      "subtitle": "Subscribe to our newsletter and never miss an update",
+      "placeholder": "Enter your email",
+      "ctaButton": "Subscribe",
+      "noSpam": "No spam, ever",
+      "noCard": "No credit card required",
+      "cancel": "Cancel anytime"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Quick answers to common questions about our service",
+      "aiCuration": {
+        "question": "How does AI-powered news curation work?",
+        "answer": "Our AI scans hundreds of sources and delivers the most relevant stories to your feed."
+      },
+      "newsletterFrequency": {
+        "question": "How often will I receive newsletters?",
+        "answer": "You can choose daily, weekly, or monthly digests depending on your preference."
+      },
+      "newsSources": {
+        "question": "Which news sources are included?",
+        "answer": "We aggregate from trusted global outlets, niche publications, and independent voices."
+      },
+      "freeTrial": {
+        "question": "Is there a free trial available?",
+        "answer": "Yes, you can explore all premium features free for 14 days."
+      },
+      "teamSharing": {
+        "question": "Can I share my subscription with my team?",
+        "answer": "Our Team plan allows up to 10 members under one subscription."
+      },
+      "cancelSubscription": {
+        "question": "Can I cancel anytime?",
+        "answer": "Yes, subscriptions can be canceled at any time with no hidden fees."
+      }
+    },
+    "testimonials": {
+      "title": "What our users say",
+      "subtitle": "Real feedback from real customers",
+      "sarah": "This app has completely changed the way I read the news. Highly recommend!",
+      "marcus": "Fantastic design and very user-friendly.",
+      "emily": "I love being able to customize my feed. It's exactly what I was looking for."
+    },
+    "stats": {
+      "activeUsers": "Active Users",
+      "articlesCurated": "Articles Curated",
+      "trustedSources": "Trusted Sources",
+      "satisfactionRate": "Satisfaction Rate"
     }
   }
 }

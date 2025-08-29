@@ -1,26 +1,27 @@
-'use client';
-
 import React from 'react';
+import { getTranslations } from 'next-intl/server';
 
-export default function NewsletterPreviewSection() {
+export default async function NewsletterPreviewSection() {
+  const t = await getTranslations('homepage.newsletterPreview');
+
   const articles = [
     {
-      title: 'AI Breakthrough in Medical Diagnosis',
-      description: 'Researchers at Stanford University have developed an AI system that can diagnose rare diseases with 95% accuracy...',
-      source: 'Stanford Medical News',
-      readTime: '5 min read'
+      title: t('sampleNewsletter.articles.aiMedical.title'),
+      description: t('sampleNewsletter.articles.aiMedical.description'),
+      source: t('sampleNewsletter.articles.aiMedical.source'),
+      readTime: t('sampleNewsletter.articles.aiMedical.readTime')
     },
     {
-      title: 'Quantum Computing Milestone Reached',
-      description: 'IBM announces a new quantum processor that maintains coherence for record-breaking durations...',
-      source: 'TechCrunch',
-      readTime: '3 min read'
+      title: t('sampleNewsletter.articles.quantum.title'),
+      description: t('sampleNewsletter.articles.quantum.description'),
+      source: t('sampleNewsletter.articles.quantum.source'),
+      readTime: t('sampleNewsletter.articles.quantum.readTime')
     },
     {
-      title: 'Sustainable Energy Investment Surge',
-      description: 'Global investment in renewable energy technologies reaches all-time high in Q1 2025...',
-      source: 'Bloomberg Energy',
-      readTime: '4 min read'
+      title: t('sampleNewsletter.articles.energy.title'),
+      description: t('sampleNewsletter.articles.energy.description'),
+      source: t('sampleNewsletter.articles.energy.source'),
+      readTime: t('sampleNewsletter.articles.energy.readTime')
     }
   ];
 
@@ -29,10 +30,10 @@ export default function NewsletterPreviewSection() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
-            See NewsFlow in Action
+            {t('title')}
           </h2>
           <p className="text-lg text-primary-600 max-w-2xl mx-auto">
-            Preview what your personalized newsletter looks like
+            {t('subtitle')}
           </p>
         </div>
 
@@ -41,10 +42,10 @@ export default function NewsletterPreviewSection() {
           {/* Newsletter Header */}
           <div className="flex justify-between items-start mb-8">
             <h3 className="text-2xl font-bold text-primary-900">
-              Your Weekly Tech Digest
+              {t('sampleNewsletter.title')}
             </h3>
             <span className="text-sm text-primary-500">
-              March 15, 2025
+              {t('sampleNewsletter.date')}
             </span>
           </div>
 

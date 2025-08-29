@@ -1,23 +1,24 @@
-'use client';
-
 import React from 'react';
+import { getTranslations } from 'next-intl/server';
 
-export default function WhyChooseSection() {
+export default async function WhyChooseSection() {
+  const t = await getTranslations('homepage.whyChoose');
+
   const features = [
     {
       emoji: '🧠',
-      title: 'AI-Powered Curation',
-      description: 'Advanced machine learning algorithms analyze thousands of articles to surface the most relevant and important news for your interests.'
+      title: t('features.aiCuration.title'),
+      description: t('features.aiCuration.description')
     },
     {
       emoji: '🛡️',
-      title: 'Trusted Sources',
-      description: 'We partner with reputable news organizations and verified journalists to ensure you receive accurate, reliable information.'
+      title: t('features.trustedSources.title'),
+      description: t('features.trustedSources.description')
     },
     {
       emoji: '⚙️',
-      title: 'Customizable Experience',
-      description: 'Tailor your news digest with custom topics, delivery frequency, and format preferences to match your reading habits.'
+      title: t('features.customizable.title'),
+      description: t('features.customizable.description')
     }
   ];
 
@@ -26,11 +27,10 @@ export default function WhyChooseSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
-            Why Choose NewsFlow?
+            {t('title')}
           </h2>
           <p className="text-lg text-primary-600 max-w-2xl mx-auto">
-            Our intelligent platform combines the best of human curation and AI 
-            technology to deliver news that matters to you.
+            {t('subtitle')}
           </p>
         </div>
 

@@ -1,23 +1,24 @@
-'use client';
-
 import React from 'react';
+import { getTranslations } from 'next-intl/server';
 
-export default function HowItWorksSection() {
+export default async function HowItWorksSection() {
+  const t = await getTranslations('homepage.howItWorks');
+
   const steps = [
     {
       number: '1',
-      title: 'Choose Your Topics',
-      description: 'Select from hundreds of topics including technology, business, science, politics, and more. Our AI learns your preferences over time.'
+      title: t('steps.chooseTopics.title'),
+      description: t('steps.chooseTopics.description')
     },
     {
       number: '2', 
-      title: 'Set Your Schedule',
-      description: 'Choose how often you want to receive your digest - daily, weekly, or custom intervals that fit your reading schedule.'
+      title: t('steps.setSchedule.title'),
+      description: t('steps.setSchedule.description')
     },
     {
       number: '3',
-      title: 'Receive & Read',
-      description: 'Get beautifully formatted newsletters with the most important stories, summaries, and links to full articles delivered to your inbox.'
+      title: t('steps.receiveRead.title'),
+      description: t('steps.receiveRead.description')
     }
   ];
 
@@ -26,10 +27,10 @@ export default function HowItWorksSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
-            How It Works
+            {t('title')}
           </h2>
           <p className="text-lg text-primary-600 max-w-2xl mx-auto">
-            Get started in just three simple steps
+            {t('subtitle')}
           </p>
         </div>
 
