@@ -20,7 +20,7 @@ export default function Header() {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
 
   const currentLanguage = languages.find(lang => lang.code === locale) || languages[0];
-
+   
   const switchLanguage = (newLocale: string) => {
     const segments = pathname.split('/');
     segments[1] = newLocale;

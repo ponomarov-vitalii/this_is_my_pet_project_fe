@@ -1,5 +1,6 @@
 // For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
-import storybook from "eslint-plugin-storybook";
+import storybook from 'eslint-plugin-storybook';
+import stylistic from '@stylistic/eslint-plugin';
 
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -19,13 +20,24 @@ const eslintConfig = [...compat.extends('next/core-web-vitals', 'next/typescript
     'out/**',
     'build/**',
     'next-env.d.ts',
+    'vitest.config.mts',
   ],
 }, {
   rules: {
-    'indent': ['warn', 2],
+    'indent': 'off',
     'quotes': ['warn', 'single'],
     'semi': ['warn', 'always'],
+    'object-curly-spacing': ['error', 'always']
   },
-}, ...storybook.configs["flat/recommended"]];
+}, 
+...storybook.configs['flat/recommended'],
+{
+  plugins: {
+    '@stylistic': stylistic
+  },
+  rules: {
+    '@stylistic/indent': ['warn', 2],
+  },
+}];
 
 export default eslintConfig;

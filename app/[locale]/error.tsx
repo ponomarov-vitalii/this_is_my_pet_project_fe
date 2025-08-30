@@ -2,7 +2,6 @@
 import { useEffect } from 'react';
 import Button from '@/components/Button/Button';
 import { useTranslations } from 'next-intl';
-import * as Sentry from '@sentry/nextjs';
 
 interface ErrorProps {
   error: Error & { digest?: string };
@@ -13,7 +12,7 @@ export default function Error({ error, reset }: ErrorProps) {
   const t = useTranslations('errors.general');
 
   useEffect(() => {
-    Sentry.captureException(error);
+    console.error('Application error:', error);
   }, [error]);
 
   return (
