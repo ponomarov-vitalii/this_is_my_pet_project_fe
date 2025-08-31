@@ -18,6 +18,7 @@ export default function Header() {
   const router = useRouter();
   const pathname = usePathname();
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const currentLanguage = languages.find(lang => lang.code === locale) || languages[0];
    
@@ -31,17 +32,17 @@ export default function Header() {
 
   return (
     <header className="w-full border-b border-primary-200 bg-primary-50 text-primary-900">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-3 sm:px-6 py-3 sm:py-4">
         {/* Logo */}
         <Link
           href={`/${locale}`}
-          className="flex items-center gap-2 text-xl font-bold text-primary-700"
+          className="flex items-center gap-1 sm:gap-2 text-base sm:text-lg lg:text-xl font-bold text-primary-700"
         >
-          📰 <span>{t('logo')}</span>
+          📰 <span className="truncate">{t('logo')}</span>
         </Link>
 
-        {/* Nav */}
-        <nav className="hidden md:flex gap-6 text-sm text-primary-600">
+        {/* Desktop Nav */}
+        <nav className="hidden lg:flex gap-6 text-sm text-primary-600">
           <Link href={`/${locale}/features`} className="hover:text-primary-800 transition-colors">
             {t('nav.features')}
           </Link>
@@ -56,8 +57,8 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* Right */}
-        <div className="flex items-center gap-3">
+        {/* Right - Desktop */}
+        <div className="hidden lg:flex items-center gap-3">
           {/* Language Selector */}
           <div className="relative">
             <button
@@ -107,7 +108,115 @@ export default function Header() {
           <Button size="sm">{t('auth.getStarted')}</Button>
           <ThemeCustomizer />
         </div>
+
+        {/* Mobile/Tablet Controls */}
+        <div className="flex lg:hidden items-center gap-1">
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-1.5 text-primary-600 hover:text-primary-800 hover:bg-primary-100 rounded-lg transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? (
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile/Tablet Menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden border-t border-primary-200">
+          <div className="px-4 sm:px-6 py-4 space-y-4">
+            {/* Mobile Nav Links */}
+            <nav className="flex flex-col space-y-3">
+              <Link 
+                href={`/${locale}/features`} 
+                className="text-primary-600 hover:text-primary-800 hover:bg-primary-100 px-3 py-2 rounded-lg transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t('nav.features')}
+              </Link>
+              <Link 
+                href={`/${locale}/pricing`} 
+                className="text-primary-600 hover:text-primary-800 hover:bg-primary-100 px-3 py-2 rounded-lg transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t('nav.pricing')}
+              </Link>
+              <Link 
+                href={`/${locale}/about`} 
+                className="text-primary-600 hover:text-primary-800 hover:bg-primary-100 px-3 py-2 rounded-lg transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t('nav.about')}
+              </Link>
+              <Link 
+                href={`/${locale}/help`} 
+                className="text-primary-600 hover:text-primary-800 hover:bg-primary-100 px-3 py-2 rounded-lg transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t('nav.help')}
+              </Link>
+            </nav>
+
+            {/* Divider */}
+            <div className="border-t border-primary-200"></div>
+
+            {/* Language Selector - Mobile */}
+            <div className="flex gap-2 items-center justify-start">
+              <span className="text-sm text-primary-500 pr-3">{t('language')}:</span>
+              <div className="flex flex-wrap gap-2">
+                {languages.map((language) => (
+                  <button
+                    key={language.code}
+                    onClick={() => {
+                      switchLanguage(language.code);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className={`flex items-center gap-2 px-3 py-2 text-sm rounded-lg transition-colors ${
+                      locale === language.code 
+                        ? 'text-primary-900 bg-primary-100' 
+                        : 'text-primary-600 hover:bg-primary-100'
+                    }`}
+                  >
+                    <span>{language.flag}</span>
+                    <span>{language.name}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+            {/* Theme Customizer - Mobile */}
+            <ThemeCustomizer />
+
+            {/* Divider */}
+            <div className="border-t border-primary-200"></div>
+
+            {/* Auth Actions - Mobile */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link
+                href={`/${locale}/login`}
+                className="flex-1 text-center px-4 py-2 text-sm text-primary-600 hover:text-primary-800 hover:bg-primary-100 rounded-lg transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t('auth.signIn')}
+              </Link>
+              <Button 
+                size="sm" 
+                className="flex-1"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t('auth.getStarted')}
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Close dropdown when clicking outside */}
       {isLanguageOpen && (
